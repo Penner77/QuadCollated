@@ -353,7 +353,7 @@ function parseSurroundingNumbersString(surroundingString) {
                 const num = parseFloat(trimmedNumStr);
                 if (!isNaN(num) && Number.isInteger(num) && num >= 0 && num <= 36) { // Add validation
                     allNumbers.push(num); // Add valid numbers (0-36)
-               }
+                }
                 // Invalid strings are skipped
             }
         });
@@ -568,7 +568,7 @@ function updateAnalysisDisplay() {
         suggestionOutput.textContent += " !SUM Balanced!";
     }
 
-    // --- Add Heads-up Reminder for Off-Balance Sum or Avg (from Step 17/18/19) ---
+    // --- Add Heads-up Reminder for Off-Balance Sum or Avg (from Step 17) ---
     let headsUpMessage = "";
 
     const isSumOffBalanceLow = (sum4 !== null && sum4 < 9);
@@ -593,7 +593,7 @@ function updateAnalysisDisplay() {
     }
 
 
-    // --- Get Surrounding Numbers --- // Section heading adjusted
+    // --- Get & Display Surrounding Numbers --- // Section heading adjusted
     const surroundingString = getSurroundingNumbersString(lastSpinFromHistory); // Get the wheel-order string
 
     // --- Process and Display Sorted Surrounding Numbers --- // Section heading adjusted
@@ -710,7 +710,7 @@ function updateAnalysisDisplay() {
      spinInput.value = ""; // Clear input for next entry
      // Keep focus on input for rapid entry (optional)
      // spinInput.focus(); // Return focus - This might cause issues on some mobile keyboards
-}
+});
 
 
 // --- Event Listener ---
