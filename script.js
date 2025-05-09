@@ -710,7 +710,7 @@ function updateAnalysisDisplay() {
      spinInput.value = ""; // Clear input for next entry
      // Keep focus on input for rapid entry (optional)
      // spinInput.focus(); // Return focus - This might cause issues on some mobile keyboards
-});
+};
 
 
 // --- Event Listener ---
